@@ -1,0 +1,25 @@
+meta {
+  name: create database
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "duration_min": 10,
+    "name": "test",
+    "password": "passwordtest",
+    "user": "usertest"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
